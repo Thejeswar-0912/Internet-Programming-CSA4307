@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        fieldset {
+            border: 2px solid #003366;
+            margin: 20px;
+            padding: 20px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 20px;
+            color: #003366;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #003366;
+            color: white;
+            padding: 10px 30px;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #005599;
+        }
+        p {
+            font-size: 14px;
+            color: #333;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<fieldset>
+    <legend>Contact Us</legend>
+
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <form>
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </form>
+    </fieldset>
+
+    <p>If you don't have a company, skip the next section.</p>
+
+    <fieldset>
+        <legend>Company Details</legend>
+
+        <form>
+            <label for="business">Business Name</label>
+            <input type="text" id="business" name="business">
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone">
+
+            <label for="website">Website URL</label>
+            <input type="text" id="website" name="website">
+
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+                <option>Purchases</option>
+                <option>Support</option>
+                <option>Sales</option>
+                <option>Others</option>
+            </select>
+
+            <label for="companyMessage">Message</label>
+            <textarea id="companyMessage" name="companyMessage" rows="4"></textarea>
+        </form>
+    </fieldset>
+
+    <button class="button">SEND</button>
+
+</fieldset>
+
+</body>
+</html>
