@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Date Methods Program</title>
+</head>
+<body>
+
+    <script>
+        // Simple program using JavaScript Date methods
+
+        // 1. Create a new Date object representing the current date and time
+        let currentDate = new Date();
+        document.write("<p>Current Date and Time: " + currentDate + "</p>");
+
+        // 2. Get individual components of the date (year, month, day, etc.)
+        let year = currentDate.getFullYear();
+        let month = currentDate.getMonth(); // Note: Months are zero-indexed (0 - 11)
+        let day = currentDate.getDate();
+        let hours = currentDate.getHours();
+        let minutes = currentDate.getMinutes();
+        let seconds = currentDate.getSeconds();
+
+        document.write("<p>Year: " + year + "</p>");
+        document.write("<p>Month: " + (month + 1) + "</p>"); // Adding 1 to the month because it's zero-indexed
+        document.write("<p>Day: " + day + "</p>");
+        document.write("<p>Hours: " + hours + "</p>");
+        document.write("<p>Minutes: " + minutes + "</p>");
+        document.write("<p>Seconds: " + seconds + "</p>");
+
+        // 3. Format the date as a string
+        let formattedDate = currentDate.toDateString();
+        document.write("<p>Formatted Date: " + formattedDate + "</p>");
+
+        // 4. Get the day of the week
+        let dayOfWeek = currentDate.getDay(); // Note: Days of the week are also zero-indexed (0 - 6)
+        document.write("<p>Day of the Week: " + dayOfWeek + "</p>");
+
+        // 5. Set a specific date and time
+        let specificDate = new Date(2023, 5, 15, 14, 30, 0); // June 15, 2023, 14:30:00
+        document.write("<p>Specific Date and Time: " + specificDate + "</p>");
+    </script>
+
+</body>
+</html>

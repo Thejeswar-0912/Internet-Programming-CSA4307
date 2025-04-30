@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q7 - Square Root</title>
+  <script>
+    function showSqrt() {
+      var num = parseFloat(document.getElementById("num").value);
+      var result = Math.sqrt(num);
+      document.getElementById("output").innerText = "Square root: " + result;
+    }
+  </script>
+</head>
+<body>
+  <h2>7. Square Root using Math Object</h2>
+  <input type="number" id="num" placeholder="Enter number">
+  <button onclick="showSqrt()">Find Square Root</button>
+  <p id="output"></p>
+</body>
+</html>

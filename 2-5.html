@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q5 - Event Handling and DHTML</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+    }
+
+    #myImage {
+      transition: transform 0.5s;
+      width: 200px;
+    }
+
+    .zoomed {
+      transform: scale(1.5);
+    }
+  </style>
+  <script>
+    function hoverBox() {
+      document.getElementById("box").style.backgroundColor = "lightgreen";
+    }
+
+    function leaveBox() {
+      document.getElementById("box").style.backgroundColor = "lightblue";
+    }
+
+    function zoomImage() {
+      document.getElementById("myImage").classList.toggle("zoomed");
+    }
+  </script>
+</head>
+<body>
+  <h2>5a. Change Color on Mouse Over</h2>
+  <div id="box" onmouseover="hoverBox()" onmouseout="leaveBox()"></div>
+
+  <h2>5b. Zoom Image on Click</h2>
+  <img src="https://via.placeholder.com/200" id="myImage" onclick="zoomImage()">
+</body>
+</html>

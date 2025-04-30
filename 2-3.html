@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q3 - Date and Time</title>
+  <script>
+    function showDateTime() {
+      document.getElementById("datetime").innerText = new Date();
+    }
+
+    function updateClock() {
+      document.getElementById("clock").innerText = new Date().toLocaleTimeString();
+      setTimeout(updateClock, 1000);
+    }
+
+    window.onload = function () {
+      showDateTime();
+      updateClock();
+    };
+  </script>
+</head>
+<body>
+  <h2>3a. Show Current Date and Time</h2>
+  <div id="datetime"></div>
+
+  <h2>3b. Digital Clock</h2>
+  <h3 id="clock"></h3>
+</body>
+</html>

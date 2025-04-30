@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q2 - DOM Manipulation</title>
+  <script>
+    function changeText() {
+      document.getElementById("myPara").innerText = "You clicked the button!";
+    }
+
+    function validateUsername() {
+      var uname = document.getElementById("username").value;
+      if (uname === "") {
+        alert("Username is required!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>2a. Change Paragraph Text</h2>
+  <p id="myPara">Original text</p>
+  <button onclick="changeText()">Click Me</button>
+
+  <h2>2b. Validate Username</h2>
+  <form onsubmit="return validateUsername()">
+    Username: <input type="text" id="username">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
