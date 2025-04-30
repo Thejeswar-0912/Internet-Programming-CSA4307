@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculator</title>
+  <script>
+    function calculateGrade() {
+      const m1 = parseFloat(document.getElementById("mark1").value);
+      const m2 = parseFloat(document.getElementById("mark2").value);
+      const m3 = parseFloat(document.getElementById("mark3").value);
+      const avg = (m1 + m2 + m3) / 3;
+
+      let grade = avg >= 90 ? "A" :
+                  avg >= 75 ? "B" :
+                  avg >= 50 ? "C" : "F";
+
+      let fail = (m1 < 50 || m2 < 50 || m3 < 50) ? "Yes" : "No";
+
+      document.getElementById("result").innerHTML =
+        `Average: ${avg.toFixed(2)}<br>Grade: ${grade}<br>Failed any subject? ${fail}`;
+    }
+  </script>
+</head>
+<body>
+  <h2>1. Grade Calculator</h2>
+  Mark 1: <input type="number" id="mark1"><br>
+  Mark 2: <input type="number" id="mark2"><br>
+  Mark 3: <input type="number" id="mark3"><br><br>
+  <button onclick="calculateGrade()">Calculate</button>
+  <div id="result"></div>
+</body>
+</html>
