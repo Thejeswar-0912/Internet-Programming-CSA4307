@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Online Toll Management</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 100px auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 40px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #0a3d62;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #0a3d62;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #145374;
+    }
+
+    .gov-logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 80px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="images/emblem.png" class="gov-logo" alt="Gov Emblem">
+    <h2>Government Toll Login</h2>
+    <form action="login.php" method="post">
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <footer>© Ministry of Road Transport & Highways</footer>
+  </div>
+</body>
+</html>
